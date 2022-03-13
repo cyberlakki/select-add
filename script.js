@@ -31,7 +31,6 @@
             document.getElementById("qty").defaultValue="1"
             arr.push(document.getElementById("menu").value)
             quan.push(document.getElementById("qty").value)
-            console.log(arr,quan)
             table()
             }
         }
@@ -39,9 +38,7 @@
             var t = '<table border="1" width"600"><tr> <th>Index</th> <th>Name</th> <th>Price</th> <th>Quantity</th> <th>Total</th> <th>Remove</th> </tr>'
 
             arr.forEach(function(x,i){
-                console.log(x,arr)
                 t+=`<tr><th>${i+1}</th><th>${x}</th><th>${priceTag(x)}</th><th>${quan[i]+"Kg" }</th> <th>${priceTag(x)*quan[i]}</th><th><button id="remove">Remove</button></th></tr>`
-                console.log("end")
                 document.getElementById("msg").innerHTML=t
             })
 
