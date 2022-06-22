@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js"></script>
-    <title>Drop  Down List</title>
-</head>
-<body>
-    <div id="container">
-    <select name="Fruits" id="menu" onchange="price()">
-        <option value="">Select Fruit</option>
-        <option value="Apple">Apple</option>
-        <option value="Bannana">Bannana</option>
-        <option value="Orange">Oranges</option>
-        <option value="Grapes">Grapes</option>
-    </select>
-    <input type="number" id="qty" placeholder="1 Kg"  ><input type="text" size="3" placeholder="Price " id="prices"><Button id="add" onclick="addItem()">Add to cart</Button><Button id="bill" onclick="remove()">Remove all</Button><br><br>
-    <p id="msg"></p>   <span id="q"></span>
-    <p id="warn"></p>
-</div>
 
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="script.js"></script>
+  <title>Drop Down List</title>
+</head>
+
+<body>
+  <div id="container">
+    <select name="Fruits" id="menu" onchange="price()">
+      <option value="">Select Fruit</option>
+      <option value="Apple">Apple</option>
+      <option value="Bannana">Bannana</option>
+      <option value="Orange">Oranges</option>
+      <option value="Grapes">Grapes</option>
+    </select>
+    <input type="number" id="qty" placeholder="1 Kg"><input type="text" size="3" placeholder="Price "
+      id="prices"><Button id="add" onclick="addItem()">Add to cart</Button><Button id="bill" onclick="removeall()">Remove
+      all</Button><br><br>
+    <p id="msg"></p> <span id="q"></span>
+    <p id="warn"></p>
+  </div>
+
+</body>
+
 </html>
