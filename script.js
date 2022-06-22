@@ -1,4 +1,4 @@
-        var arr =[]
+var arr =[]
         var quan=[]
         const arr2=[
             {name:"Apple" , price:20},
@@ -35,13 +35,17 @@
             }
         }
         function table(){
+            if(arr.length>0){
             var t = '<table border="1" width"600"><tr> <th>Index</th> <th>Name</th> <th>Price</th> <th>Quantity</th> <th>Total</th> <th>Remove</th> </tr>'
 
             arr.forEach(function(x,i){
-                t+=`<tr><th>${i+1}</th><th>${x}</th><th>${priceTag(x)}</th><th>${quan[i]+"Kg" }</th> <th>${priceTag(x)*quan[i]}</th><th><button id="remove">Remove</button></th></tr>`
+                t+=`<tr><th>${i+1}</th><th>${x}</th><th>${priceTag(x)}</th><th>${quan[i]+"Kg" }</th> <th>${priceTag(x)*parseInt(quan[i])}</th><th><button onclick="remove(${i})">Remove</button></th></tr>`
                 document.getElementById("msg").innerHTML=t
             })
-
+        }
+        else(
+            document.getElementById('msg').innerHTML=''
+        )
         }
         function priceTag(x){
             if (x =="Apple"){ 
@@ -56,13 +60,15 @@
             if (x =="Grapes"){
                 return 35;
             }
-            
-        
-        }
-        function remove(){
+            }
+            function remove(value){
+                arr.splice(value,1)
+                quan.splice(value,1)
+                table()
+            }
+        function removeall(){
 
             arr=[]
             quan=[]
             document.getElementById("msg").innerHTML=""
         }
-    
